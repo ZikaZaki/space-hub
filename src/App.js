@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import RocketList from './components/RocketList/RocketList';
+import Missions from './components/Missions/Missions';
 import ProfilePage from './components/ProfilePage/ProfilePage';
 
 // import styling
@@ -13,7 +14,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route exact path="/" element={<RocketList />} />
-        <Route path="/missions" element={<h1>Missions</h1>} />
+        <Route path="/missions" element={<Missions />} />
         <Route path="/profile" element={<ProfilePage />} />
       </Routes>
     </div>
