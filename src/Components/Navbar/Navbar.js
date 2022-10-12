@@ -13,18 +13,28 @@ const Navbar = () => (
       </div>
       <ul className={styles['nav-list']}>
         <li className={styles['list-item']}>
-          <NavLink className={styles['nav-link']} to="/" exact="true">
+          <NavLink
+            className={({ isActive }) => (isActive ? styles['active-link'] : styles['inactive-link'])}
+            end
+            to="/"
+          >
             Rockets
           </NavLink>
         </li>
         <li className={styles['list-item']}>
-          <NavLink className={styles['nav-link']} to="/missions">
+          <NavLink
+            className={({ isActive }) => (isActive ? styles['active-link'] : styles['inactive-link'])}
+            to="/missions"
+          >
             Missions
           </NavLink>
         </li>
         <span className={styles.separator}> | </span>
         <li className={styles['list-item']}>
-          <NavLink className={styles['nav-link']} to="/profile">
+          <NavLink
+            className={({ isActive }) => (isActive ? styles['active-link'] : styles['inactive-link'])}
+            to="/profile"
+          >
             My Profile
           </NavLink>
         </li>

@@ -88,7 +88,14 @@
   text-align: center;
 }
 
-.nav-link {
+.active-link {
+  font-size: 0.9rem;
+  letter-spacing: 1.9px;
+  text-decoration: underline;
+  padding: 0.2rem;
+}
+
+.inactive-link {
   font-size: 0.9rem;
   letter-spacing: 1.9px;
   text-decoration: none;
@@ -97,8 +104,4 @@
 
 .separator {
   color: #121212;
-}
-
-.nav-link:active {
-  text-decoration: underline;
 }
