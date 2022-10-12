@@ -4,7 +4,6 @@ import Navbar from './components/Navbar/Navbar';
 import RocketList from './components/RocketList/RocketList';
 import Missions from './components/Missions/Missions';
 import ProfilePage from './components/ProfilePage/ProfilePage';
-
 // import styling
 import styles from './App.module.css';
 
