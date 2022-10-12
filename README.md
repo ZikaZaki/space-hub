@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Travelers-Hub
 
-## Available Scripts
+> This web application is built upon real live data from the **SpaceX API**. The main purpose is to build a web application for a company that provides commercial and scientific space travel services. The application will allow users to book **rockets** and join selected space **missions**.
 
-In the project directory, you can run:
+## Built With ⚙️
 
-### `npm start`
+- **Major languages**: HTML, CSS, & JavaScript.
+- **Frameworks**: React & Redux.
+- **Linters**: Lighthouse, Webhint, Stylelint & ESLint.
+- **Technologies used**: NPM, Webpack, & Jest Library.
+- **Tools**: Git, Gitflow, GitHub, VS Code, & Chrome Browser.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Live Demo (Not available yet) 🚀
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/68ea255b-ae38-4005-968b-6fbd0a8d676b/deploy-status)](https://app.netlify.com/#)
 
-### `npm test`
+[Live Demo Link](#)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+To get a local copy up and running follow these simple example steps.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [x] Basic Knowledge of **HTML**, **CSS**, & **JavaScript**.
+- [x] Basic knowledge of **React** fundamentals.
+- [x] Basic knowledge of **Redux** fundamentals.
+- [x] Basic knowledge of **ES6** syntax.
+- [x] Basic knowledge of **Git** & **GitHub**.
+- [x] Basic knowledge of **Linters**.
+- [x] Basic knowledge of **Webpack**.
+- [x] Basic knowledge of **Jest** unit-testing library.
+- [x] Basic knowledge of **VS Code** or any other code-editors.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Setup
 
-### `npm run eject`
+- Create a new **Microverse** folder and move into it.
+- Open the **Command Prompt (CMD)** in the current directory (Microverse Folder).
+- Run the following command:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+$ git clone https://github.com/ZikaZaki/travelers-hub.git
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Once finished you should see a new folder called **travelers-hub** folder in your current directory.
+- Start customizing the project so it fits your personal preferences and needs.
+- Enjoy your new professional **travelers** application!
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Install Dependencies
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To check for linters, use the files provided by [Microverse](https://github.com/microverseinc/linters-config/tree/master/react-redux). A GitHub action is also set to run during pull request.
 
-## Learn More
+```
+$ npm install
+```
+### Run tests
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+We used the **Jest** library for testing the project.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+$ npm test
+```
 
-### Code Splitting
+## Authors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+👤 **Zakariya Al-Khamisi ([ZikaZaki](https://github.com/ZikaZaki))**
 
-### Analyzing the Bundle Size
+- GitHub: [ZikaZaki](https://github.com/ZikaZaki)
+- Twitter: [Zakariya Al-Khamisi](https://twitter.com/ZakariyaKhamisi)
+- LinkedIn: [Zakariya Al-Khamisi](https://www.linkedin.com/in/zakariyaalkhamisisap/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Show your support
 
-### Making a Progressive Web App
+Give a ⭐️ if you like this project!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🤝 Contributing
 
-### Advanced Configuration
+Contributions, issues, and feature requests are welcome!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Feel free to check the [issues page](../../issues/).
 
-### Deployment
+## Acknowledgments
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- [Microverse](https://www.microverse.org/)
+- Code Reviewers & Coding Partners
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
 
-### `npm run build` fails to minify
+## 📝 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is [MIT](./LICENSE) licensed.
+
+_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
