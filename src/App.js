@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import RocketList from './components/RocketList/RocketList';
 import ProfilePage from './components/ProfilePage/ProfilePage';
+
 // import styling
 import styles from './App.module.css';
 
