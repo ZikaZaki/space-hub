@@ -10,8 +10,10 @@
 }
 
 .rocket-img {
-  min-width: 16rem;
+  min-width: 18rem;
   min-height: 12rem;
+  width: 18rem;
+  height: 12rem;
   object-fit: cover;
 }
 

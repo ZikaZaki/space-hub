@@ -1,23 +1,33 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 // import styles
 import styles from './Rocket.module.css';
-import rocketImg from './rocket.jpg';
+// import rocketImg from './rocket.jpg';
 
-const Rocket = () => (
+const Rocket = ({
+  name,
+  description,
+  image,
+  reserved,
+}) => (
   <div className={styles['rocket-container']}>
-    <img className={styles['rocket-img']} src={rocketImg} alt="rocket" />
+    <img className={styles['rocket-img']} src={image} alt="rocket" />
     <div className={styles['rocket-info']}>
       <div className={styles['rocket-name']}>
-        <h2>Falcon 9</h2>
-        <span className={styles.badge}>Reserved</span>
+        <h2>{name}</h2>
+        {reserved && <span className={styles.badge}>Reserved</span>}
       </div>
-      <p>
-        The Falcon 9 is a two-stage rocket designed and manufactured by SpaceX for the reliable
-        and safe transport of satellites and the Dragon spacecraft into orbit.
-      </p>
+      <p>{description}</p>
       <button type="button" className={styles['reserve-btn']}>Reserve Rocket</button>
     </div>
   </div>
 );
+
+Rocket.propTypes = {
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  reserved: PropTypes.bool.isRequired,
+};
 
 export default Rocket;
