@@ -1,44 +1,58 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import Table from 'react-bootstrap/Table';
 import Badge from 'react-bootstrap/Badge';
 import Button from 'react-bootstrap/Button';
+import { fetchMissions } from '../../redux/configureStore';
 // import styling
 import styles from './Missions.module.css';
 
-const Missions = () => (
-  <div className={styles['missions-container']}>
-    <Table striped bordered hover responsive="xl" size="sm">
-      <thead>
-        <tr>
-          <th className="w-20 p-2" scope="col"><h4>Mission</h4></th>
-          <th className="w-20 p-2" scope="col"><h4>Description</h4></th>
-          <th className="w-15 p-2" scope="col"><h4>Status</h4></th>
-          <th className="w-15 p-2" scope="col"> </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th className="align-items-center" scope="row"><h5>Thaicom</h5></th>
-          <td>
-            <p>
-              Thaicom is a series of communications satellites operated by
-              Thaicom Public Company Limited. The first satellite in the series, Thaicom 1,
-              was launched in 1997. The most recent satellite in the series,
-              Thaicom 8, was launched in 2019.
-            </p>
-          </td>
-          <td>
-            <Badge className="align-self-center m-4" bg="secondary">NOT A MEMBER</Badge>
-            {' '}
-          </td>
-          <td>
-            <Button className="m-4" variant="outline-danger text-nowrap">Leave mission</Button>
-            {' '}
-          </td>
-        </tr>
-      </tbody>
-    </Table>
-  </div>
-);
+const Missions = () => {
+  // Get missions from the store
+  const missions = useSelector((state) => state.missions);
+  // Get dispatch function
+  const dispatch = useDispatch();
+  // Get missions from the API
+  useEffect(() => {
+    dispatch(fetchMissions());
+    console.log(missions);
+  }, [dispatch]);
+
+  return (
+    <div className={styles['missions-container']}>
+      <Table striped bordered hover responsive="xl" size="sm">
+        <thead>
+          <tr>
+            <th className="p-2" scope="col"><h4>Mission</h4></th>
+            <th className="p-2" scope="col"><h4>Description</h4></th>
+            <th className="p-2" scope="col"><h4>Status</h4></th>
+            <th className="p-2" scope="col"> </th>
+          </tr>
+        </thead>
+        <tbody>
+          { missions && missions.map((mission) => (
+            <tr key={mission.id}>
+            <th scope="row"><h5>{mission.name}</h5></th>
+            <td>
+              <p>
+                {mission.description}
+              </p>
+            </td>
+            <td>
+              { mission.joined ? <Badge className="m-2" bg="active" style={{backgroundColor: '#18a2b8'}}>Active Member</Badge>
+                               : <Badge className="m-2 " bg="secondary">NOT A MEMBER</Badge>}
+              {' '}
+            </td>
+            <td>
+              <Button className="m-4" variant="outline-danger text-nowrap">Leave Mission</Button>
+              {' '}
+            </td>
+          </tr>
+          ))}
+        </tbody>
+      </Table>
+    </div>
+  );
+};
 
 export default Missions;
