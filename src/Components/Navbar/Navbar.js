@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from './Navbar.module.css';
-// import the nav image
+// import the nav-logo image
 import NavLogo from './planet.png';
 
 const Navbar = () => (
@@ -19,6 +19,14 @@ const Navbar = () => (
             to="/"
           >
             Rockets
+          </NavLink>
+        </li>
+        <li className={styles['list-item']}>
+          <NavLink
+            className={({ isActive }) => (isActive ? styles['active-link'] : styles['inactive-link'])}
+            to="/dragons"
+          >
+            Dragons
           </NavLink>
         </li>
         <li className={styles['list-item']}>
