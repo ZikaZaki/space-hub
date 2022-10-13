@@ -48,8 +48,8 @@ export const dragonsSlice = createSlice({
           id: dragon.id,
           name: dragon.name,
           description: dragon.description,
-          image: dragon.id==='dragon1' ? dragon.flickr_images[1] : dragon.flickr_images[0],
-        //   'https://images.unsplash.com/photo-1542731244-8c9b6b5c5f3c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZHJhZ29ufGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+          image: dragon.id === 'dragon1' ? dragon.flickr_images[1] : dragon.flickr_images[0],
+          //   'https://images.unsplash.com/photo-1542731244-8c9b6b5c5f3c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZHJhZ29ufGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
           reserved: false,
         }));
         return dragons;
