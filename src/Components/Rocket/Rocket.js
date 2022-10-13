@@ -13,7 +13,6 @@ const Rocket = ({
   image,
   reserved,
 }) => {
-
   const dispatch = useDispatch();
   const handleClick = () => {
     dispatch(reserveRocket(id));
@@ -32,7 +31,7 @@ const Rocket = ({
       </div>
     </div>
   );
-}
+};
 
 Rocket.propTypes = {
   id: PropTypes.string.isRequired,

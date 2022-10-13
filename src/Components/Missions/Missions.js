@@ -15,7 +15,6 @@ const Missions = () => {
   // Get missions from the API
   useEffect(() => {
     dispatch(fetchMissions());
-    console.log(missions);
   }, [dispatch]);
 
   return (
@@ -32,22 +31,22 @@ const Missions = () => {
         <tbody>
           { missions && missions.map((mission) => (
             <tr key={mission.id}>
-            <th scope="row"><h5>{mission.name}</h5></th>
-            <td>
-              <p>
-                {mission.description}
-              </p>
-            </td>
-            <td>
-              { mission.joined ? <Badge className="m-2" bg="active" style={{backgroundColor: '#18a2b8'}}>Active Member</Badge>
-                               : <Badge className="m-2 " bg="secondary">NOT A MEMBER</Badge>}
-              {' '}
-            </td>
-            <td>
-              <Button className="m-4" variant="outline-danger text-nowrap">Leave Mission</Button>
-              {' '}
-            </td>
-          </tr>
+              <th scope="row"><h5>{mission.name}</h5></th>
+              <td>
+                <p>
+                  {mission.description}
+                </p>
+              </td>
+              <td>
+                { mission.joined ? <Badge className="m-2" bg="active" style={{ backgroundColor: '#18a2b8' }}>Active Member</Badge>
+                  : <Badge className="m-2 " bg="secondary">NOT A MEMBER</Badge>}
+                {' '}
+              </td>
+              <td>
+                <Button className="m-4" variant="outline-danger text-nowrap">Leave Mission</Button>
+                {' '}
+              </td>
+            </tr>
           ))}
         </tbody>
       </Table>

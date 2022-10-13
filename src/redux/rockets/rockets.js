@@ -28,7 +28,7 @@ export const reserveRocket = createAsyncThunk(
   RESERVE_ROCKET,
   async (id) => {
     try {
-      console.log('Reserved button is clicked', id);
+      // console.log('Reserved button is clicked', id);
       const response = await axios.patch(`${rocketsURL}/${id}`, { reserved: true });
       return response.data;
     } catch (error) {
