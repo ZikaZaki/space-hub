@@ -1,10 +1,9 @@
-/* eslint-disable */
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar/Navbar';
-import RocketList from './components/RocketList/RocketList';
-import Missions from './components/Missions/Missions';
-import ProfilePage from './components/ProfilePage/ProfilePage';
+import Navbar from './Components/Navbar/Navbar';
+import RocketList from './Components/RocketList/RocketList';
+import Missions from './Components/Missions/Missions';
+import ProfilePage from './Components/ProfilePage/ProfilePage';
 // import styling
 import styles from './App.module.css';
 
