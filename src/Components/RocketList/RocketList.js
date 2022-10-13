@@ -21,6 +21,7 @@ const RocketList = () => {
         {rockets && rockets.map((rocket) => (
           <li key={rocket.id} className={styles['rocket-item']}>
             <Rocket
+              id={rocket.id}
               name={rocket.name}
               description={rocket.description}
               image={rocket.image}
