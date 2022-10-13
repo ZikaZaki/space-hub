@@ -1,24 +1,44 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { reserveDragon } from '../../redux/dragons/dragons';
 // import styles
 import styles from './Dragon.module.css';
-import dragonImg from './dragon.jpg';
+// import dragonImg from './dragon.jpg';
 
-const Dragon = () => (
-  <div className={styles['dragon-container']}>
-    <img className={styles['dragon-img']} src={dragonImg} alt="dragon" />
-    <div className={styles['dragon-info']}>
-      <div className={styles['dragon-name']}>
-        <h2>Dragon Name</h2>
-        <span className={styles.badge}>Reserved</span>
-      </div>
-      <p>
-        Dragon Description Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Dragon Description Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Dragon Description Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      </p>
-      <button type="button" className={styles['reserve-btn']}>Reserve Dragon</button>
-    </div>
-  </div>
-);
+const Dragon = ({
+    id,
+    name,
+    description,
+    image,
+    reserved,
+  }) => {
+    const dispatch = useDispatch();
+    const handleClick = () => {
+      dispatch(reserveDragon(id));
+    };
+
+    return (
+        <div className={styles['dragon-container']}>
+          <img className={styles['dragon-img']} src={image} alt="dragon" />
+          <div className={styles['dragon-info']}>
+            <div className={styles['dragon-name']}>
+              <h2>{name}</h2>
+              {reserved && <span className={styles.badge}>Reserved</span>}
+            </div>
+            <p>{description}</p>
+            <button type="button" className={styles['reserve-btn']} onClick={handleClick}>Reserve Dragon</button>
+          </div>
+        </div>
+      );
+}
+
+Dragon.propTypes = {
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    reserved: PropTypes.bool.isRequired,
+};
 
 export default Dragon;

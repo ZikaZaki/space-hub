@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+import falconImg from './rocket.jpg';
 
 // Rockets API
 const rocketsURL = 'https://api.spacexdata.com/v3/rockets';
@@ -48,7 +49,7 @@ export const rocketsSlice = createSlice({
           id: rocket.id,
           name: rocket.rocket_name,
           description: rocket.description,
-          image: rocket.flickr_images[0],
+          image: rocket.id === 1 ? falconImg : rocket.flickr_images[0],
           reserved: false,
         }));
         return rockets;
