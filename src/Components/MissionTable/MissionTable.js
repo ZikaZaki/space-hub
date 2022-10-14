@@ -10,7 +10,7 @@ const MissionTable = () => {
   const missions = useSelector((state) => state.missions);
 
   return (
-    <div className={styles['missions-container']}>
+    <div className={styles['missions-container']} data-testid="missions-container">
       <Table striped bordered hover responsive="xl" size="sm">
         <thead>
           <tr>

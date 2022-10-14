@@ -9,7 +9,7 @@ const ProfilePage = () => {
   const joinedMissions = useSelector((state) => state.missions).filter((mission) => mission.joined);
 
   return (
-    <div className={styles['page-container']}>
+    <div className={styles['page-container']} data-testid="page-container">
       <ul className={styles.list}>
         <span className={styles['list-title']}>My Missions</span>
         { joinedMissions && joinedMissions.map((mission) => (

@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Check if the component renders correctly 1`] = `
+<div
+  className="rocket-list-container"
+  data-testid="rocket-list-container"
+>
+  <ul
+    className="rocket-list"
+  />
+</div>
+`;

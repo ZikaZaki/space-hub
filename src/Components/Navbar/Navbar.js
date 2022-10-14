@@ -5,7 +5,7 @@ import styles from './Navbar.module.css';
 import NavLogo from './planet.png';
 
 const Navbar = () => (
-  <div className={styles['nav-container']}>
+  <div className={styles['nav-container']} data-testid="nav-container">
     <nav className={styles.nav}>
       <div className={styles['nav-logo']}>
         <img className={styles['logo-img']} src={NavLogo} alt="planet" />

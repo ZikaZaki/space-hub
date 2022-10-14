@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Check if the component has changed 1`] = `
+<div
+  className="nav-container"
+  data-testid="nav-container"
+>
+  <nav
+    className="nav"
+  >
+    <div
+      className="nav-logo"
+    >
+      <img
+        alt="planet"
+        className="logo-img"
+        src="planet.png"
+      />
+      <h1
+        className="logo-title"
+      >
+        Space Travelers' Hub
+      </h1>
+    </div>
+    <ul
+      className="nav-list"
+    >
+      <li
+        className="list-item"
+      >
+        <a
+          aria-current="page"
+          className="active-link"
+          href="/"
+          onClick={[Function]}
+        >
+          Rockets
+        </a>
+      </li>
+      <li
+        className="list-item"
+      >
+        <a
+          className="inactive-link"
+          href="/dragons"
+          onClick={[Function]}
+        >
+          Dragons
+        </a>
+      </li>
+      <li
+        className="list-item"
+      >
+        <a
+          className="inactive-link"
+          href="/missions"
+          onClick={[Function]}
+        >
+          Missions
+        </a>
+      </li>
+      <span
+        className="separator"
+      >
+         | 
+      </span>
+      <li
+        className="list-item"
+      >
+        <a
+          className="inactive-link"
+          href="/profile"
+          onClick={[Function]}
+        >
+          My Profile
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <hr />
+</div>
+`;

@@ -9,7 +9,7 @@ const RocketList = () => {
   const rockets = useSelector((state) => state.rockets);
 
   return (
-    <div className={styles['rocket-list-container']}>
+    <div className={styles['rocket-list-container']} data-testid="rocket-list-container">
       <ul className={styles['rocket-list']}>
         {rockets && rockets.map((rocket) => (
           <li key={rocket.id} className={styles['rocket-item']}>

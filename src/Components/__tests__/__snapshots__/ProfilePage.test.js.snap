@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Check if the component has changed 1`] = `
+<div
+  className="page-container"
+  data-testid="page-container"
+>
+  <ul
+    className="list"
+  >
+    <span
+      className="list-title"
+    >
+      My Missions
+    </span>
+    <span
+      className="list-placeholder"
+    >
+      ...No missions joined
+    </span>
+  </ul>
+  <ul
+    className="list"
+  >
+    <span
+      className="list-title"
+    >
+      My Rockets
+    </span>
+    <span
+      className="list-placeholder"
+    >
+      ...No rockets reserved
+    </span>
+  </ul>
+  <ul
+    className="list"
+  >
+    <span
+      className="list-title"
+    >
+      My Dragons
+    </span>
+    <span
+      className="list-placeholder"
+    >
+      ...No dragons reserved
+    </span>
+  </ul>
+</div>
+`;

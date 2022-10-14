@@ -9,7 +9,7 @@ const DragonList = () => {
   const dragons = useSelector((state) => state.dragons);
 
   return (
-    <div className={styles['dragon-list-container']}>
+    <div className={styles['dragon-list-container']} data-testid="dragon-list-container">
       <ul className={styles['dragon-list']}>
         {dragons && dragons.map((dragon) => (
           <li key={dragon.id} className={styles['dragon-item']}>
