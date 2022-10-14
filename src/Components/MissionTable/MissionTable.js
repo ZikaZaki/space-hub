@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import Table from 'react-bootstrap/Table';
-import { fetchMissions } from '../../redux/configureStore';
 import Mission from '../Mission/Mission';
 // import styles
 import styles from './MissionTable.module.css';
@@ -9,12 +8,6 @@ import styles from './MissionTable.module.css';
 const MissionTable = () => {
   // Get missions from the store
   const missions = useSelector((state) => state.missions);
-  // Get dispatch function
-  const dispatch = useDispatch();
-  // Get missions from the API
-  useEffect(() => {
-    dispatch(fetchMissions());
-  }, [dispatch]);
 
   return (
     <div className={styles['missions-container']}>

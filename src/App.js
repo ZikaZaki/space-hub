@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { fetchRockets, fetchDragons, fetchMissions } from './redux/configureStore';
 import Navbar from './Components/Navbar/Navbar';
 import RocketList from './Components/RocketList/RocketList';
 import DragonList from './Components/DragonList/DragonList';
@@ -9,6 +11,14 @@ import ProfilePage from './Components/ProfilePage/ProfilePage';
 import styles from './App.module.css';
 
 function App() {
+  const dispatch = useDispatch();
+  // Get rockets, dragons, and missions from the API
+  useEffect(() => {
+    dispatch(fetchRockets());
+    dispatch(fetchDragons());
+    dispatch(fetchMissions());
+  }, [dispatch]);
+
   return (
     <div className={styles['app-container']}>
       <Navbar />

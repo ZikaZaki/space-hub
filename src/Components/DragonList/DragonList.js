@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { fetchDragons } from '../../redux/configureStore';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import Dragon from '../Dragon/Dragon';
 // import styles
 import styles from './DragonList.module.css';
@@ -8,12 +7,6 @@ import styles from './DragonList.module.css';
 const DragonList = () => {
   // Get dragons from the store
   const dragons = useSelector((state) => state.dragons);
-  // Get dispatch function
-  const dispatch = useDispatch();
-  // Get dragons from the API
-  useEffect(() => {
-    dispatch(fetchDragons());
-  }, [dispatch]);
 
   return (
     <div className={styles['dragon-list-container']}>
