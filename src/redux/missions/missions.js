@@ -6,7 +6,6 @@ const missionsURL = 'https://api.spacexdata.com/v3/missions';
 
 // Actions
 const GET_MISSIONS = 'travelers-hub/missions/getMissions';
-const JOIN_MISSION = 'travelers-hub/missions/joinMission';
 
 // Initial State
 const initialState = [];
@@ -24,22 +23,18 @@ export const fetchMissions = createAsyncThunk(
   },
 );
 
-export const joinMission = createAsyncThunk(
-  JOIN_MISSION,
-  async (id) => {
-    try {
-      const response = await axios.patch(`${missionsURL}/${id}`, { reserved: true });
-      return response.data;
-    } catch (error) {
-      return error;
-    }
-  },
-);
-
 // Creating the slice
 export const missionsSlice = createSlice({
   name: 'missions',
   initialState,
+  reducers: {
+    toggleMission(state, action) {
+      const mission = state.find((mission) => mission.id === action.payload);
+      if (mission) {
+        mission.joined = !mission.joined;
+      }
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchMissions.fulfilled, (state, action) => {
@@ -54,5 +49,6 @@ export const missionsSlice = createSlice({
   },
 });
 
+export const { toggleMission } = missionsSlice.actions;
 // Exporting the reducer
 export default missionsSlice.reducer;
