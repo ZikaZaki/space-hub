@@ -4,7 +4,8 @@
   justify-content: flex-start;
   align-items: flex-start;
   background-color: #fff;
-  gap: 4rem;
+  flex-wrap: wrap;
+  gap: 3rem;
   height: 100vh;
   width: 100%;
   padding: 1rem 4rem;
@@ -17,9 +18,11 @@
   justify-content: center;
   align-items: flex-start;
   list-style-type: none;
-  width: 100%;
+  background-color: rgb(250, 248, 245);
+  width: 30%;
   height: auto;
   padding: 0;
+  padding-top: 0.5rem;
   margin: 0;
 }
 
@@ -27,14 +30,14 @@
   font-weight: bold;
   height: 100%;
   width: 100%;
-  padding: 0.5rem 0;
+  padding: 1rem;
   margin: 0;
 }
 
 .list-item {
   font-weight: normal;
   color: #121212;
-  border: 2px solid #dbd9d9;
+  border: 2px solid #9e9c9c;
   border-bottom: none;
   width: 100%;
   height: 100%;
@@ -43,5 +46,13 @@
 }
 
 .list-item:last-child {
-  border-bottom: 2px solid #dbd9d9;
+  border-bottom: 2px solid #9e9c9c;
+}
+
+.list-placeholder {
+  font-weight: 600;
+  color: #9e9c9c;
+  width: 100%;
+  padding: 1rem;
+  margin: 0;
 }
