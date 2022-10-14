@@ -4,7 +4,6 @@ import { useDispatch } from 'react-redux';
 import { reserveDragon } from '../../redux/dragons/dragons';
 // import styles
 import styles from './Dragon.module.css';
-// import dragonImg from './dragon.jpg';
 
 const Dragon = ({
   id,
