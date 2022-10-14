@@ -11,10 +11,10 @@ it('Check if the component renders correctly', () => {
     <Provider store={store}>
       <MissionTable>
         <Mission
-            id="9D1B7E0"
-            name="FalconSat"
-            description="The FalconSat is an American nanosatellite built by SpaceX"
-            joined={false}
+          id="9D1B7E0"
+          name="FalconSat"
+          description="The FalconSat is an American nanosatellite built by SpaceX"
+          joined={false}
         />
       </MissionTable>
     </Provider>,
@@ -27,10 +27,10 @@ it('the component should render a div container', () => {
     <Provider store={store}>
       <MissionTable>
         <Mission
-            id="9D1B7E0"
-            name="FalconSat"
-            description="The FalconSat is an American nanosatellite built by SpaceX"
-            joined={false}
+          id="9D1B7E0"
+          name="FalconSat"
+          description="The FalconSat is an American nanosatellite built by SpaceX"
+          joined={false}
         />
       </MissionTable>
     </Provider>,
