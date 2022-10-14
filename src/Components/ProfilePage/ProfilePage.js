@@ -15,7 +15,7 @@ const ProfilePage = () => {
         { joinedMissions && joinedMissions.map((mission) => (
           <li key={mission.id} className={styles['list-item']}>
             <span className={styles['list-item-title']}>{mission.name}</span>
-        </li>
+          </li>
         ))}
         { joinedMissions.length === 0 && <span className={styles['list-placeholder']}>...No missions joined</span> }
       </ul>
@@ -24,7 +24,7 @@ const ProfilePage = () => {
         { reservedRockets && reservedRockets.map((rocket) => (
           <li key={rocket.id} className={styles['list-item']}>
             <span className={styles['list-item-title']}>{rocket.name}</span>
-        </li>
+          </li>
         ))}
         { reservedRockets.length === 0 && <span className={styles['list-placeholder']}>...No rockets reserved</span> }
       </ul>
@@ -33,12 +33,12 @@ const ProfilePage = () => {
         { reservedDragons && reservedDragons.map((dragon) => (
           <li key={dragon.id} className={styles['list-item']}>
             <span className={styles['list-item-title']}>{dragon.name}</span>
-        </li>
+          </li>
         ))}
         { reservedDragons.length === 0 && <span className={styles['list-placeholder']}>...No dragons reserved</span> }
       </ul>
     </div>
   );
-}
+};
 
 export default ProfilePage;
