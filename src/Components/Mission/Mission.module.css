@@ -8,7 +8,7 @@
   min-width: 10rem;
   min-height: 2.5rem;
   padding: 0;
-  margin: 0;
+  margin: 1rem;
 }
 
 .join-btn:hover {
@@ -26,7 +26,7 @@
   min-width: 10rem;
   min-height: 2.5rem;
   padding: 0;
-  margin: 0;
+  margin: 1rem;
 }
 
 .leave-btn:hover {

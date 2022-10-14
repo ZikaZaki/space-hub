@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { reserveDragon } from '../../redux/dragons/dragons';
+import { toggleDragon } from '../../redux/dragons/dragons';
 // import styles
 import styles from './Dragon.module.css';
 
@@ -13,9 +13,6 @@ const Dragon = ({
   reserved,
 }) => {
   const dispatch = useDispatch();
-  const handleClick = () => {
-    dispatch(reserveDragon(id));
-  };
 
   return (
     <div className={styles['dragon-container']}>
@@ -26,7 +23,8 @@ const Dragon = ({
           {reserved && <span className={styles.badge}>Reserved</span>}
         </div>
         <p>{description}</p>
-        <button type="button" className={styles['reserve-btn']} onClick={handleClick}>Reserve Dragon</button>
+        {reserved ? <button type="button" className={styles['cancel-btn']} onClick={() => dispatch(toggleDragon(id))}>Cancel Reservation</button>
+          : <button type="button" className={styles['reserve-btn']} onClick={() => dispatch(toggleDragon(id))}>Reserve Dragon</button>}
       </div>
     </div>
   );

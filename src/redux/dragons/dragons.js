@@ -6,7 +6,6 @@ const dragonsURL = 'https://api.spacexdata.com/v3/dragons';
 
 // Actions
 const GET_DRAGONS = 'travelers-hub/dragons/getDragons';
-const RESERVE_DRAGON = 'travelers-hub/dragons/reserveDragon';
 
 // Initial State
 const initialState = [];
@@ -24,22 +23,18 @@ export const fetchDragons = createAsyncThunk(
   },
 );
 
-export const reserveDragon = createAsyncThunk(
-  RESERVE_DRAGON,
-  async (id) => {
-    try {
-      const response = await axios.patch(`${dragonsURL}/${id}`, { reserved: true });
-      return response.data;
-    } catch (error) {
-      return error;
-    }
-  },
-);
-
 // Creating the slice
 export const dragonsSlice = createSlice({
   name: 'dragons',
   initialState,
+  reducers: {
+    toggleDragon(state, action) {
+      const dragon = state.find((dragon) => dragon.id === action.payload);
+      if (dragon) {
+        dragon.reserved = !dragon.reserved;
+      }
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchDragons.fulfilled, (state, action) => {
@@ -55,5 +50,6 @@ export const dragonsSlice = createSlice({
   },
 });
 
+export const { toggleDragon } = dragonsSlice.actions;
 // Exporting the reducer
 export default dragonsSlice.reducer;

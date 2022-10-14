@@ -81,3 +81,8 @@
   padding: 0;
   margin: 0;
 }
+
+.cancel-btn:hover {
+  color: #fff;
+  background-color: rgb(113, 109, 109);
+}
