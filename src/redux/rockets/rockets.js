@@ -7,7 +7,6 @@ const rocketsURL = 'https://api.spacexdata.com/v3/rockets';
 
 // Actions
 const GET_ROCKETS = 'travelers-hub/rockets/getRockets';
-const RESERVE_ROCKET = 'travelers-hub/rockets/reserveRocket';
 
 // Initial State
 const initialState = [];
@@ -25,23 +24,18 @@ export const fetchRockets = createAsyncThunk(
   },
 );
 
-export const reserveRocket = createAsyncThunk(
-  RESERVE_ROCKET,
-  async (id) => {
-    try {
-      // console.log('Reserved button is clicked', id);
-      const response = await axios.patch(`${rocketsURL}/${id}`, { reserved: true });
-      return response.data;
-    } catch (error) {
-      return error;
-    }
-  },
-);
-
 // Creating the slice
 export const rocketsSlice = createSlice({
   name: 'rockets',
   initialState,
+  reducers: {
+    toggleRocket(state, action) {
+      const rocket = state.find((rocket) => rocket.id === action.payload);
+      if (rocket) {
+        rocket.reserved = !rocket.reserved;
+      }
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchRockets.fulfilled, (state, action) => {
@@ -57,5 +51,6 @@ export const rocketsSlice = createSlice({
   },
 });
 
+export const { toggleRocket } = rocketsSlice.actions;
 // Exporting the reducer
 export default rocketsSlice.reducer;
