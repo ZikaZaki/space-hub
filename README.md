@@ -1,7 +1,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Space-Travelers-Hub
-![logo](space-travelers-hub.jpg)
+
 > This web application is built upon real live data from the **SpaceX API**. The main purpose is to build a web application for a company that provides commercial and scientific space travel services. The application will allow users to book **rockets, dragons,** and join selected space **missions**.
 
 ## Built With ⚙️
@@ -12,11 +12,11 @@
 - **Technologies used**: NPM, Webpack, & Jest Library.
 - **Tools**: Git, Gitflow, GitHub, VS Code, & Chrome Browser.
 
-## Live Demo (Deployed on Netlify) 🚀
+## Live Demo (Not Yet) 🚀
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/68ea255b-ae38-4005-968b-6fbd0a8d676b/deploy-status)](https://endearing-liger-ec20c1.netlify.app/)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/68ea255b-ae38-4005-968b-6fbd0a8d676b/deploy-status)](#)
 
-[Live Demo Link](https://endearing-liger-ec20c1.netlify.app/)
+[Live Demo Link](#)
 
 ## Getting Started
 
