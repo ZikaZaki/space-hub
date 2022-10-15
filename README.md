@@ -10,7 +10,7 @@
 - **Frameworks**: React & Redux.
 - **Linters**: Lighthouse, Webhint, Stylelint & ESLint.
 - **Technologies used**: NPM, Webpack, & Jest Library.
-- **Tools**: Git, Gitflow, GitHub, VS Code, & Chrome Browser.
+- **Tools**: Git, Gitflow, GitHub, Netlify, VS Code, & Chrome Browser.
 
 ## Live Demo (Deployed on Netlify) 🚀
 
@@ -57,10 +57,10 @@ $ npm install
 ```
 ### Run tests
 
-We used the **Jest** library for testing the project.
+We used the **Jest & React-testing** libraries for testing the project.
 
 ```
-$ npm test
+$ npm run test
 ```
 
 ## Authors
