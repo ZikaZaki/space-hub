@@ -10,7 +10,7 @@
 - **Frameworks**: React & Redux.
 - **Linters**: Lighthouse, Webhint, Stylelint & ESLint.
 - **Technologies used**: NPM, Webpack, & Jest Library.
-- **Tools**: Git, Gitflow, GitHub, VS Code, & Chrome Browser.
+- **Tools**: Git, Gitflow, GitHub, Netlify, VS Code, & Chrome Browser.
 
 ## Live Demo (Not Yet) 🚀
 
@@ -50,17 +50,18 @@ $ git clone https://github.com/ZikaZaki/travelers-hub.git
 
 ### Install Dependencies
 
-To check for linters, use the files provided by [Microverse](https://github.com/microverseinc/linters-config/tree/master/react-redux). A GitHub action is also set to run during pull request.
+To check for linters, use the files provided by [Microverse](https://github.com/microverseinc/linters-config/tree/master/react-redux). A GitHub action is also set to run during pull request. Run the following command to install dependencies:
 
-```
+```bash
 $ npm install
 ```
+
 ### Run tests
 
-We used the **Jest** library for testing the project.
+We used the **Jest & React-testing** libraries for testing the project.
 
 ```
-$ npm test
+$ npm run test
 ```
 
 ## Authors
