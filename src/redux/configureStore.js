@@ -1,7 +1,6 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import logger from 'redux-logger';
 
-
 const rootReducer = combineReducers({
   // Add your reducers here
 });
