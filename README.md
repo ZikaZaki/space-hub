@@ -41,12 +41,12 @@ To get a local copy up and running follow these simple example steps.
 - Run the following command:
 
 ```
-$ git clone https://github.com/ZikaZaki/travelers-hub.git
+$ git clone https://github.com/ZikaZaki/space-hub.git
 ```
 
-- Once finished you should see a new folder called **travelers-hub** folder in your current directory.
+- Once finished you should see a new folder called **space-hub** folder in your current directory.
 - Start customizing the project so it fits your personal preferences and needs.
-- Enjoy your new professional **travelers** application!
+- Enjoy your new professional **space-hub** application!
 
 ### Install Dependencies
 
