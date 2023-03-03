@@ -1,5 +1,3 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
-
 # Space-Hub (Space-Travelers-Hub)
 ![logo](space-travelers-hub.jpg)
 > This web application is built upon real live data from the **SpaceX API**. The main purpose is to build a web application for a company that provides commercial and scientific space travel services. The application will allow users to book **rockets, dragons,** and join selected space **missions**.
